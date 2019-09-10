@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="hostIP"    default="192.168.1.35"/>
+  <arg name="mode"      default="White"/>
+  <arg name="logging"   default="false"/>
+  <arg name="expriment" default="true"/>
+  <arg name="camera"    default="true"/>
+
+  <group if="$(arg logging)">
+    <node
+      pkg="rosbag"
+      name="Record"
+      type="record"
+      args="--all -o ~/Desktop/ex.bag"
+    />
+  </group>
+
+  <group if="$(arg expriment)">
+    <node
+      pkg="subscribe_wheelchair"
+      name="odometry_publisher"
+      type="subscribe_wheelchair"
+    />
+    <node
+      pkg="publish_wheelchair"
+      name="ros2raspberry_pi"
+      type="publish_wheelchair"
+      output="screen"
+      launch-prefix="xterm -e"
+    />
+
+    <group if="$(eval mode=='White')">
+      <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+      <param name="/velodyne_nodelet_manager_driver/device_ip" value="192.168.1.201" />
+      <param name="/velodyne_nodelet_manager_driver/frame_id"  value="velodyneWhite" />
+      <param name="/velodyne_nodelet_manager_driver/port"  value="2368" />
+    </group>
+
+    <group if="$(eval mode=='Blue')">
+      <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+      <param name="/velodyne_nodelet_manager_driver/device_ip" value="192.168.1.202" />
+      <param name="/velodyne_nodelet_manager_driver/frame_id"  value="velodyneBlue" />
+      <param name="/velodyne_nodelet_manager_driver/port"  value="2369" />
+    </group>
+
+    <group if="$(eval mode=='Red')">
+      <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+      <param name="/velodyne_nodelet_manager_driver/device_ip" value="192.168.1.203" />
+      <param name="/velodyne_nodelet_manager_driver/frame_id"  value="velodyneRed" />
+      <param name="/velodyne_nodelet_manager_driver/port"  value="2370" />
+    </group>
+  </group>
+
+  <group unless="$(arg expriment)">
+    <include file="$(find electric_wheelchair)/launch/gazebo.launch"/>
+  	<node
+  		pkg="wheelchair_gazebo_bridge"
+  		name="gazebo_bridge"
+  		type="wheelchair_gazebo_bridge"
+    />
+  </group>
+</launch>

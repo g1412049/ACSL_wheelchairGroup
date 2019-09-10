@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>noname</author>
+      <authoring_tool>Blender 2.78.0 commit date:2017-02-08, commit time:13:50, hash:3c04373</authoring_tool>
+    </contributor>
+    <created>2018-04-07T16:26:53</created>
+    <modified>2018-04-07T16:26:53</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="base-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.402027 0.4487902 0.422159 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.2815126 0.2815126 0.2815126 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="base-material" name="base">
+      <instance_effect url="#base-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Circle_010-mesh" name="Circle.010">
+      <mesh>
+        <source id="Circle_010-mesh-positions">
+          <float_array id="Circle_010-mesh-positions-array" count="102">0 1 -0.3170232 -0.7071068 0.7071068 -0.3170232 -1 0 -0.3170232 -0.7071068 -0.7071068 -0.3170232 0 -1 -0.3170232 0.7071068 -0.7071067 -0.3170232 1 0 -0.3170232 0.7071068 0.7071067 -0.3170232 4.01455e-7 0 -0.3170232 0 1 -0.2384927 -0.7071068 0.7071068 -0.2384927 -1 0 -0.2384927 -0.7071068 -0.7071068 -0.2384927 0 -1 -0.2384927 0.7071068 -0.7071067 -0.2384927 1 0 -0.2384927 0.7071068 0.7071067 -0.2384927 0 1 0.3170062 0 1 0.2385118 -0.7071068 0.7071068 0.2385118 -1 0 0.2385118 -0.7071068 -0.7071068 0.2385118 0 -1 0.2385118 0.7071068 -0.7071067 0.2385118 1 0 0.2385118 0.7071068 0.7071067 0.2385118 -0.7071068 0.7071068 0.3170062 -1 0 0.3170062 -0.7071068 -0.7071068 0.3170062 0 -1 0.3170062 0.7071068 -0.7071067 0.3170062 1 0 0.3170062 0.7071068 0.7071067 0.3170062 4.01455e-7 0 0.3170062</float_array>
+          <technique_common>
+            <accessor source="#Circle_010-mesh-positions-array" count="34" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Circle_010-mesh-normals">
+          <float_array id="Circle_010-mesh-normals-array" count="78">-0.5489864 0.5489864 -0.6302602 0 0 -1 -0.7763856 0 -0.6302583 -1 0 0 -0.7071068 0.7071068 0 0.5489864 -0.5489864 -0.6302602 0.7763856 0 -0.6302583 0.5489864 0.5489864 -0.6302602 0 0.7763856 -0.6302583 -0.5489864 -0.5489864 -0.6302602 0 -0.7763856 -0.6302583 0 -1 0 -0.7071068 -0.7071068 0 1 0 0 0.7071068 -0.7071068 0 0 1 0 0.7071068 0.7071068 0 -0.5489864 0.5489864 0.6302602 -0.5489864 -0.5489864 0.6302602 0.5489864 -0.5489864 0.6302602 0.5489864 0.5489864 0.6302602 0 0 1 0 0.7763856 0.6302583 0.7763856 0 0.6302583 0 -0.7763856 0.6302583 -0.7763856 0 0.6302583</float_array>
+          <technique_common>
+            <accessor source="#Circle_010-mesh-normals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Circle_010-mesh-vertices">
+          <input semantic="POSITION" source="#Circle_010-mesh-positions"/>
+        </vertices>
+        <polylist material="base-material" count="64">
+          <input semantic="VERTEX" source="#Circle_010-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Circle_010-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>1 0 8 1 2 2 11 3 19 4 10 4 5 5 8 1 6 6 7 7 8 1 0 8 3 9 8 1 4 10 13 11 21 12 12 12 15 13 23 14 14 14 9 15 25 16 16 16 7 7 15 13 6 6 5 5 13 11 4 10 3 9 11 3 2 2 1 0 9 15 0 8 0 8 16 16 7 7 6 6 14 14 5 5 4 10 12 12 3 9 2 2 10 4 1 0 20 3 26 17 19 4 22 11 28 18 21 12 24 13 30 19 23 14 18 15 32 20 25 16 16 16 24 13 15 13 14 14 22 11 13 11 12 12 20 3 11 3 10 4 18 15 9 15 26 17 33 21 17 22 33 21 30 19 31 23 33 21 32 20 17 22 33 21 28 18 29 24 25 16 31 23 24 13 23 14 29 24 22 11 21 12 27 25 20 3 19 4 17 22 18 15 1 0 0 8 8 1 11 3 20 3 19 4 5 5 4 10 8 1 7 7 6 6 8 1 3 9 2 2 8 1 13 11 22 11 21 12 15 13 24 13 23 14 9 15 18 15 25 16 7 7 16 16 15 13 5 5 14 14 13 11 3 9 12 12 11 3 1 0 10 4 9 15 0 8 9 15 16 16 6 6 15 13 14 14 4 10 13 11 12 12 2 2 11 3 10 4 20 3 27 25 26 17 22 11 29 24 28 18 24 13 31 23 30 19 18 15 17 22 32 20 16 16 25 16 24 13 14 14 23 14 22 11 12 12 21 12 20 3 10 4 19 4 18 15 26 17 27 25 33 21 33 21 29 24 30 19 33 21 31 23 32 20 33 21 27 25 28 18 25 16 32 20 31 23 23 14 30 19 29 24 21 12 28 18 27 25 19 4 26 17 17 22</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Circle_001" name="Circle_001" type="NODE">
+        <matrix sid="transform">0.1453039 0 0 0.225207 0 1.73273e-9 0.07090995 0.245 0 -0.1453039 8.45593e-10 -1.46031e-8 0 0 0 1</matrix>
+        <instance_geometry url="#Circle_010-mesh" name="Circle_001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="base-material" target="#base-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
