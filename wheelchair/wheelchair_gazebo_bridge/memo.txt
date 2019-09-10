@@ -1,0 +1,17 @@
+
+			obj.pub_flag	 = robotics.ros.Publisher(obj.node_flag,'/wheelchair/flag','std_msgs/Int64');
+			obj.msg_flag	 = rosmessage(obj.pub_flag);
+			%/wheelchar/diff_drive_controller/cmd_vel
+			%(geometry_msgs/Twist)
+			obj.pub_cmd_vel  = robotics.ros.Publisher(obj.node_cmd_vel,'/wheelchair/cmd_vel','geometry_msgs/Twist');
+			obj.msg_cmd_vel  = rosmessage(obj.pub_cmd_vel);
+			%/gazebo/model_states
+			%(gazebo_msgs/ModelStates)
+			%wheel_chair
+			%docs.ros.org/jade/api/gazebo_msgs/html/msg/ModelStates.html
+			obj.pub_pose = robotics.ros.Publisher(obj.node_pose,'/wheelchair/pose','geometry_msgs/Pose');
+			obj.msg_pose = rosmessage(obj.pub_pose);
+			%/wheelchair/diff_drive_controller/odom
+			%m (nav_msgs/Odometry) 
+			obj.sub_odom = robotics.ros.Subscriber(obj.node_odom,'/wheelchair/odom','nav_msgs/Odometry');
+			obj.msg_odom = rosmessage(obj.sub_odom);
