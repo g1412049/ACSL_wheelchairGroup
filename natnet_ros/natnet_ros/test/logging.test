@@ -1,5 +1,0 @@
-<launch>
-  <test test-name="logtest"
-        pkg="natnet_ros" type="logtest">
-  </test>
-</launch>

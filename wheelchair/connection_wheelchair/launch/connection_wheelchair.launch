@@ -31,6 +31,21 @@
 
     <group if="$(eval mode=='White')">
       <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+      <param name="calibration" default="$(find velodyne_pointcloud)/params/VLP16db.yaml"/>
+      <param name="device_ip" default="" />
+      <param name="frame_id" default="velodyne" />
+      <param name="manager" default="$(arg frame_id)_nodelet_manager" />
+      <param name="max_range" default="130.0" />
+      <param name="min_range" default="0.4" />
+      <param name="pcap" default="" />
+      <param name="port" default="2370" />
+      <param name="read_fast" default="false" />
+      <param name="read_once" default="false" />
+      <param name="repeat_delay" default="0.0" />
+      <param name="rpm" default="1200.0" />
+      <param name="cut_angle" default="-0.01" />
+      <param name="laserscan_ring" default="-1" />
+      <param name="laserscan_resolution" default="0.007" />
       <param name="/velodyne_nodelet_manager_driver/device_ip" value="192.168.1.201" />
       <param name="/velodyne_nodelet_manager_driver/frame_id"  value="velodyneWhite" />
       <param name="/velodyne_nodelet_manager_driver/port"  value="2368" />
