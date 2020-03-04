@@ -9,8 +9,5 @@ This repository file has three part of program file.  (WHILL Model CR用に設�
 ## Program for Raspberry Pi
 このプログラムはWHILL Model CRに対してUDP通信とRS232CによるURAT通信を用いて制御入力の印加及びオドメトリ情報の取得が可能です．
 ```bashrc
-git clone https://github.com/IntelRealSense/realsense-ros.git
-cd realsense-ros/
-git checkout `git tag | sort -V | grep -P "^\d+\.\d+\.\d+" | tail -1`
-cd ..
+
 ```
