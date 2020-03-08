@@ -42,14 +42,14 @@ $ git clone --recursive https://github.com/g1412049/packages_wheelchair.git
 $ git clone https://github.com/ros-drivers/velodyne.git
 $ git clone https://bitbucket.org/DataspeedInc/velodyne_simulator.git
 ```
-さらにIntel&reg; RealSense&trade; Devicesのcloneを実行してください．
+さらに[Intel&reg; RealSense&trade; Devices](https://github.com/IntelRealSense/realsense-ros)のcloneを実行してください．
 ```
 $ git clone https://github.com/IntelRealSense/realsense-ros.git
 $ cd realsense-ros/
 $ git checkout `git tag | sort -V | grep -P "^\d+\.\d+\.\d+" | tail -1`
 $ cd ~/catkin_ws/src
 ```
-最後に NaturalPoint OptiTrack motion capture system用NatNet 3 ROS driverをcloneします． 
+最後に NaturalPoint OptiTrack motion capture system用[NatNet 3 ROS driver](https://github.com/mje-nz/natnet_ros)をcloneします． 
 ```
 $ git clone --recursive https://github.com/mje-nz/natnet_ros.git
 $ cd ..
