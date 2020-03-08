@@ -7,3 +7,21 @@
 [submodule "realsense-ros"]
 	path = realsense-ros
 	url = https://github.com/IntelRealSense/realsense-ros.git
+[submodule "create_world"]
+	path = create_world
+	url = https://github.com/g1412049/create_world.git
+[submodule "wheelchair_gazebo_bridge"]
+	path = wheelchair_gazebo_bridge
+	url = https://github.com/g1412049/wheelchair_gazebo_bridge.git
+[submodule "electric_wheelchair"]
+	path = electric_wheelchair
+	url = https://github.com/g1412049/electric_wheelchair.git
+[submodule "subscribe_wheelchair"]
+	path = subscribe_wheelchair
+	url = https://github.com/g1412049/subscribe_wheelchair.git
+[submodule "publish_wheelchair"]
+	path = publish_wheelchair
+	url = https://github.com/g1412049/publish_wheelchair.git
+[submodule "connection_wheelchair"]
+	path = connection_wheelchair
+	url = https://github.com/g1412049/connection_wheelchair.git
