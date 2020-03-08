@@ -1,13 +1,11 @@
-# ACSL_wheelchairGroup
+# packages_wheelchair
 ## Overview
-This is a repository file for menbers that are belong to Advanced Control Systems Lab. in Tokyo City Univ.  
-This repository file has three part of program file.  (WHILL Model CR用に設計されています)
-1. The program to be execute on the Raspberry Pi
-2. The program to be execute on the Robot Operating System
-3. The program to be execute on the MATLAB
+このリポジトリは東京都市大学高機能機械制御研究室電動車椅子班 Robot Operating System(ROS)でのパッケージを掲載しています．
+以下にインストール方法を記載するので，その手順に従ってパッケージをインストールしてください．
+また，このインストールでは*Ubuntu 18.04LTS*及び*ROS melodic*を対象に紹介しています．
 
-## Program for Raspberry Pi
-このプログラムはWHILL Model CRに対してUDP通信とRS232CによるURAT通信を用いて制御入力の印加及びオドメトリ情報の取得が可能です．
-```bashrc
-
+## ROSインストール
+まず，ROS
+```
+$ 
 ```
